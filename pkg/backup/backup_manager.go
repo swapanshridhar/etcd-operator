@@ -37,6 +37,9 @@ import (
 
 // BackupManager backups an etcd cluster.
 type BackupManager struct {
+	//Swapan
+	logger *logrus.Entry
+
 	kubecli kubernetes.Interface
 
 	endpoints     []string
@@ -49,6 +52,7 @@ type BackupManager struct {
 // NewBackupManagerFromWriter creates a BackupManager with backup writer.
 func NewBackupManagerFromWriter(kubecli kubernetes.Interface, bw writer.Writer, tc *tls.Config, endpoints []string, namespace string) *BackupManager {
 	return &BackupManager{
+		logger:        logrus.WithField("pkg", "backup"),
 		kubecli:       kubecli,
 		endpoints:     endpoints,
 		namespace:     namespace,
@@ -82,11 +86,11 @@ func (bm *BackupManager) SaveSnap(ctx context.Context, s3Path string, isPeriodic
 	}
 
 	// Swapan
-	logrus.Infof("File Uploading")
-	//bm.logger.Info("File Uploading")
+	//logrus.Infof("File Uploading")
+	bm.logger.Info("File Uploading")
 	L.Upload("upload", "s3://swap-etcd-backup-bucket1", rc)
-	logrus.Infof("File Uploaded")
-	//bm.logger.Info("File Uploaded")
+	//logrus.Infof("File Uploaded")
+	bm.logger.Info("File Uploaded")
 	_, err = bm.bw.Write(ctx, s3Path, rc)
 	if err != nil {
 		return 0, "", nil, fmt.Errorf("failed to write snapshot (%v)", err)
