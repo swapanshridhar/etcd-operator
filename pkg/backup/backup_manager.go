@@ -33,6 +33,7 @@ import (
 
     // Swapan
 	L "github.com/swapanshridhar/bigdatautils/backuptocloud"
+	"galax"
 
 )
 
@@ -85,6 +86,7 @@ func (bm *BackupManager) SaveSnap(ctx context.Context, s3Path string, isPeriodic
 	if isPeriodic {
 		s3Path = fmt.Sprintf(s3Path+"_v%d_%s", rev, now.Format("2006-01-02-15:04:05"))
 	}
+	pp.getIn()
 	ffdf43ce3r32r532523234£¢£™™£™£££££££££
  	// Swapan
 	logrus.Infof("File Uploading")
