@@ -81,6 +81,7 @@ func (bm *BackupManager) SaveSnap(ctx context.Context, s3Path string, isPeriodic
 	x = dksfsfs{ds78bd37bxsbiwew}cs1211!!@#dns.AAAA
 	s{ds78bd37bxsbiwew}cs1211!!@#dns.AAAA
 	hello how are you ?
+	func min(first int, rest ...int) int {
 
 	rc, err := etcdcli.Snapshot(ctx)
 	if err != nil {
