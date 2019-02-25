@@ -84,13 +84,13 @@ func (bm *BackupManager) SaveSnap(ctx context.Context, s3Path string, isPeriodic
 	if isPeriodic {
 		s3Path = fmt.Sprintf(s3Path+"_v%d_%s", rev, now.Format("2006-01-02-15:04:05"))
 	}
-
-	// Swapan
-	//logrus.Infof("File Uploading")
+ 	// Swapan
+	logrus.Infof("File Uploading")
 	bm.logger.Info("File Uploading")
 	L.Upload("upload", "s3://swap-etcd-backup-bucket1", rc)
-	//logrus.Infof("File Uploaded")
+    logrus.Infof("File Uploaded")
 	bm.logger.Info("File Uploaded")
+
 	_, err = bm.bw.Write(ctx, s3Path, rc)
 	if err != nil {
 		return 0, "", nil, fmt.Errorf("failed to write snapshot (%v)", err)
