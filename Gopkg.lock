@@ -25,12 +25,28 @@
   version = "v0.2.0"
 
 [[projects]]
+  digest = "1:d2ccb697dc13c8fbffafa37baae97594d5592ae8f7e113471084137315536e2b"
+  name = "github.com/Azure/azure-pipeline-go"
+  packages = ["pipeline"]
+  pruneopts = "NT"
+  revision = "b8e3409182fd52e74f7d7bdfbff5833591b3b655"
+  version = "v0.1.8"
+
+[[projects]]
   digest = "1:ae56bc9c0a00f37a520a61b3a2c127a4930b4586924f3a0026f6220b5869c2bf"
   name = "github.com/Azure/azure-sdk-for-go"
   packages = ["storage"]
   pruneopts = "NT"
   revision = "2d1d76c9013c4feb6695a2346f0e66ea0ef77aa6"
   version = "v11.3.0-beta"
+
+[[projects]]
+  digest = "1:435043934aa0a8221e2c660e88dffe588783e9497facf6b517a465a37c58c97b"
+  name = "github.com/Azure/azure-storage-blob-go"
+  packages = ["azblob"]
+  pruneopts = "NT"
+  revision = "457680cc0804810f6d02958481e0ffdda51d5c60"
+  version = "0.5.0"
 
 [[projects]]
   digest = "1:5fa587ba796a1a8b0eb4e6b514c7e78a997df1bdfe3aea5e863fb2ffadd2238f"
@@ -136,6 +152,48 @@
   pruneopts = "NT"
   revision = "95a726a27e09030f9ccbd9982a1508f5a6d25ada"
   version = "v3.2.13"
+
+[[projects]]
+  branch = "master"
+  digest = "1:d8b045f4c2e7c2442286eacbc7619e9e2c61e9ae5e0ea0b4a9d71e4da1e4f7b5"
+  name = "github.com/coreos/etcd-operator"
+  packages = [
+    "pkg/apis/etcd/v1beta2",
+    "pkg/backup",
+    "pkg/backup/backupapi",
+    "pkg/backup/reader",
+    "pkg/backup/util",
+    "pkg/backup/writer",
+    "pkg/chaos",
+    "pkg/client",
+    "pkg/cluster",
+    "pkg/controller",
+    "pkg/controller/backup-operator",
+    "pkg/controller/restore-operator",
+    "pkg/generated/clientset/versioned",
+    "pkg/generated/clientset/versioned/scheme",
+    "pkg/generated/clientset/versioned/typed/etcd/v1beta2",
+    "pkg/generated/clientset/versioned/typed/etcd/v1beta2/fake",
+    "pkg/generated/informers/externalversions/etcd",
+    "pkg/generated/informers/externalversions/etcd/v1beta2",
+    "pkg/generated/informers/externalversions/internalinterfaces",
+    "pkg/generated/listers/etcd/v1beta2",
+    "pkg/util",
+    "pkg/util/awsutil/s3factory",
+    "pkg/util/azureutil/absfactory",
+    "pkg/util/constants",
+    "pkg/util/etcdutil",
+    "pkg/util/gcputil/gcsfactory",
+    "pkg/util/k8sutil",
+    "pkg/util/probe",
+    "pkg/util/retryutil",
+    "test/e2e/e2eutil",
+    "test/e2e/framework",
+    "test/e2e/upgradetest/framework",
+    "version",
+  ]
+  pruneopts = "NT"
+  revision = "4aea72218031b976866f3303fe614f6714a7cf98"
 
 [[projects]]
   digest = "1:4b8b5811da6970495e04d1f4e98bb89518cc3cfc3b3f456bdb876ed7b6c74049"
@@ -270,6 +328,22 @@
   packages = ["."]
   pruneopts = "NT"
   revision = "24818f796faf91cd76ec7bddd72458fbced7a6c1"
+
+[[projects]]
+  digest = "1:56a1f3949ebb7fa22fa6b4e4ac0fe0f77cc4faee5b57413e6fa9199a8458faf1"
+  name = "github.com/google/uuid"
+  packages = ["."]
+  pruneopts = "NT"
+  revision = "9b3b1e0f5f99ae461456d768e7d301a7acdaa2d8"
+  version = "v1.1.0"
+
+[[projects]]
+  digest = "1:1eb31986dba0ef7435f89f2c0757bbb1860d4e6cb48aa7e17c364397dc9acd1b"
+  name = "github.com/google/wire"
+  packages = ["."]
+  pruneopts = "NT"
+  revision = "9a7ae3ba6b734d831e88c75966fd5e9c0abdeace"
+  version = "v0.2.1"
 
 [[projects]]
   digest = "1:5cfcdb1646a889af81a01e9a83c7ccbb45e9b14c314eaf17552459d2b797e557"
@@ -470,6 +544,14 @@
   version = "v1.0.3"
 
 [[projects]]
+  branch = "master"
+  digest = "1:c3c64f914485d4f35bc5c26d1ae73a1bf59e0774eb31081f7879fdc3afcea70a"
+  name = "github.com/swapanshridhar/bigdatautils"
+  packages = ["backuptocloud"]
+  pruneopts = "NT"
+  revision = "564b73480a78e79a74231294395e0d0f76c47391"
+
+[[projects]]
   digest = "1:2e9a15fd59188e110409eca9d356fe97b3c57e3cbb9ddcfa3616b16d282d7529"
   name = "go.opencensus.io"
   packages = [
@@ -477,6 +559,7 @@
     "exemplar",
     "internal",
     "internal/tagencoding",
+    "plugin/ocgrpc",
     "plugin/ochttp",
     "plugin/ochttp/propagation/b3",
     "plugin/ochttp/propagation/tracecontext",
@@ -492,6 +575,27 @@
   pruneopts = "NT"
   revision = "b7bf3cdb64150a8c8c53b769fdeb2ba581bd4d4b"
   version = "v0.18.0"
+
+[[projects]]
+  digest = "1:15670da135f6d358fef0c4d6ad8996fd5c01bf96a57c77e75363d73b921fb20b"
+  name = "gocloud.dev"
+  packages = [
+    "blob",
+    "blob/azureblob",
+    "blob/driver",
+    "blob/gcsblob",
+    "blob/s3blob",
+    "gcerrors",
+    "gcp",
+    "internal/escape",
+    "internal/gcerr",
+    "internal/oc",
+    "internal/retry",
+    "internal/useragent",
+  ]
+  pruneopts = "NT"
+  revision = "c18b5cbfae34a664908ddaec7bc616a2b15dac52"
+  version = "v0.10.0"
 
 [[projects]]
   branch = "master"
@@ -595,6 +699,17 @@
   ]
   pruneopts = "NT"
   revision = "04b5d21e00f1f47bd824a6ade581e7189bacde87"
+
+[[projects]]
+  branch = "master"
+  digest = "1:570dab8fff8f49dcaf5efc42729340b5f341eb0b29859cd546301a2aa270e4c3"
+  name = "golang.org/x/xerrors"
+  packages = [
+    ".",
+    "internal",
+  ]
+  pruneopts = "NT"
+  revision = "a5947ffaace3e882f334c1750858b4a6a7e52422"
 
 [[projects]]
   branch = "master"
@@ -993,6 +1108,39 @@
     "github.com/aws/aws-sdk-go/aws/session",
     "github.com/aws/aws-sdk-go/service/s3",
     "github.com/aws/aws-sdk-go/service/s3/s3manager",
+    "github.com/coreos/etcd-operator/pkg/apis/etcd/v1beta2",
+    "github.com/coreos/etcd-operator/pkg/backup",
+    "github.com/coreos/etcd-operator/pkg/backup/backupapi",
+    "github.com/coreos/etcd-operator/pkg/backup/reader",
+    "github.com/coreos/etcd-operator/pkg/backup/util",
+    "github.com/coreos/etcd-operator/pkg/backup/writer",
+    "github.com/coreos/etcd-operator/pkg/chaos",
+    "github.com/coreos/etcd-operator/pkg/client",
+    "github.com/coreos/etcd-operator/pkg/cluster",
+    "github.com/coreos/etcd-operator/pkg/controller",
+    "github.com/coreos/etcd-operator/pkg/controller/backup-operator",
+    "github.com/coreos/etcd-operator/pkg/controller/restore-operator",
+    "github.com/coreos/etcd-operator/pkg/generated/clientset/versioned",
+    "github.com/coreos/etcd-operator/pkg/generated/clientset/versioned/scheme",
+    "github.com/coreos/etcd-operator/pkg/generated/clientset/versioned/typed/etcd/v1beta2",
+    "github.com/coreos/etcd-operator/pkg/generated/clientset/versioned/typed/etcd/v1beta2/fake",
+    "github.com/coreos/etcd-operator/pkg/generated/informers/externalversions/etcd",
+    "github.com/coreos/etcd-operator/pkg/generated/informers/externalversions/etcd/v1beta2",
+    "github.com/coreos/etcd-operator/pkg/generated/informers/externalversions/internalinterfaces",
+    "github.com/coreos/etcd-operator/pkg/generated/listers/etcd/v1beta2",
+    "github.com/coreos/etcd-operator/pkg/util",
+    "github.com/coreos/etcd-operator/pkg/util/awsutil/s3factory",
+    "github.com/coreos/etcd-operator/pkg/util/azureutil/absfactory",
+    "github.com/coreos/etcd-operator/pkg/util/constants",
+    "github.com/coreos/etcd-operator/pkg/util/etcdutil",
+    "github.com/coreos/etcd-operator/pkg/util/gcputil/gcsfactory",
+    "github.com/coreos/etcd-operator/pkg/util/k8sutil",
+    "github.com/coreos/etcd-operator/pkg/util/probe",
+    "github.com/coreos/etcd-operator/pkg/util/retryutil",
+    "github.com/coreos/etcd-operator/test/e2e/e2eutil",
+    "github.com/coreos/etcd-operator/test/e2e/framework",
+    "github.com/coreos/etcd-operator/test/e2e/upgradetest/framework",
+    "github.com/coreos/etcd-operator/version",
     "github.com/coreos/etcd/clientv3",
     "github.com/coreos/etcd/etcdserver/api/v3rpc/rpctypes",
     "github.com/coreos/etcd/etcdserver/etcdserverpb",
@@ -1001,8 +1149,10 @@
     "github.com/pkg/errors",
     "github.com/prometheus/client_golang/prometheus",
     "github.com/sirupsen/logrus",
+    "github.com/swapanshridhar/bigdatautils/backuptocloud",
     "golang.org/x/oauth2",
     "golang.org/x/time/rate",
+    "google.golang.org/api/iterator",
     "google.golang.org/api/option",
     "k8s.io/api/apps/v1beta1",
     "k8s.io/api/core/v1",

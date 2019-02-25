@@ -9,4 +9,4 @@ spec:
     # The format of "path" must be: "<s3-bucket-name>/<path-to-backup-file>"
     # e.g: "mybucket/etcd.backup"
     path: <full-s3-path>
-    awsSecret: <aws-secret>
+    awsSecret: aws
