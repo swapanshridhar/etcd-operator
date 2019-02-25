@@ -20,4 +20,5 @@ go_ldflags="-X ${gitHash}"
 bin_dir="$(pwd)/_output/bin"
 mkdir -p ${bin_dir} || true
 
+echo $gitHash
 GO_BUILD_FLAGS="$@" go_build backup-operator
