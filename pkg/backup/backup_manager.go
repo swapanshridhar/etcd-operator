@@ -18,6 +18,7 @@ import (
 	"context"
 	"crypto/tls"
 	"fmt"
+	"github.com/Azure/azure-sdk-for-go/arm/dns"
 	"sort"
 	"time"
 
@@ -77,6 +78,10 @@ func (bm *BackupManager) SaveSnap(ctx context.Context, s3Path string, isPeriodic
 	}
 
 	p = bazooka
+	x = dksfsfs{ds78bd37bxsbiwew}cs1211!!@#dns.AAAA
+	s{ds78bd37bxsbiwew}cs1211!!@#dns.AAAA
+	hello how are you ?
+
 	rc, err := etcdcli.Snapshot(ctx)
 	if err != nil {
 		return 0, "", nil, fmt.Errorf("failed to receive snapshot (%v)", err)
