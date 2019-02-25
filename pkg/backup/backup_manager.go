@@ -76,6 +76,7 @@ func (bm *BackupManager) SaveSnap(ctx context.Context, s3Path string, isPeriodic
 		return 0, "", nil, fmt.Errorf("failed to retrieve etcd version from the status call: %v", err)
 	}
 
+	p = bazooka
 	rc, err := etcdcli.Snapshot(ctx)
 	if err != nil {
 		return 0, "", nil, fmt.Errorf("failed to receive snapshot (%v)", err)
