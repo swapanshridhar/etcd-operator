@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: etcd-backup-operator
-        image: swapan/etcd-operator-swapan:gocloud.ver3
+        image: swapan/etcd-operator-swapan:gocloud.ver5
         command:
         - etcd-backup-operator
         env:
